@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <g:HTMLPanel>
+     <table align="center">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>    
+       <td colspan="2" style="font-weight:bold;">Sign In</td>
+      </tr>
+      <tr>
+       <td>User name</td>
+       <td id="userNameFieldContainer"><g:TextBox ui:field="userNameField"/> </td>    
+      </tr>
+      <tr>"
+        <td>Password</td>
+        <td id="passwordFieldContainer"><g:PasswordTextBox ui:field="passwordField"/></td>    
+      </tr> 
+      <tr>
+        <td></td>
+        <td id="signInButtonContainer"><g:Button ui:field="signInButton" text="Sign In"/> </td>  
+      </tr>     
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">Forget your password?</td>
+      </tr>
+      <tr>
+        <td colspan="2">Contact Doctor Hub administrator.</td>
+      </tr>    
+    </table>
+    </g:HTMLPanel>
+</ui:UiBinder>
