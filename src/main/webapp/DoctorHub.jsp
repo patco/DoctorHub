@@ -4,8 +4,9 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>DoctorHub</title>
 		<!--include the SC Core API-->
+	<script>var isomorphicDir = "DoctorHub/sc/"</script>
 	<script src='DoctorHub/sc/modules/ISC_Core.js'></script>
-	
+
 	<!--include SmartClient -->
 	<script src='DoctorHub/sc/modules/ISC_Foundation.js'></script>
 	<script src='DoctorHub/sc/modules/ISC_Containers.js'></script>
