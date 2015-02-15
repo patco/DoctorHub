@@ -1,0 +1,26 @@
+<list>
+<record>
+    <icon>activities</icon>
+    <name>Activities</name>
+</record>
+<record>
+    <icon>calendar</icon>
+    <name>Calendar</name>
+</record>
+<record>
+    <icon>leads</icon>
+    <name>Leads</name>
+</record>
+<record>
+    <icon>opportunities</icon>
+    <name>Opportunities</name>
+</record>
+<record>
+    <icon>accounts</icon>
+    <name>Accounts</name>
+</record>
+<record>
+    <icon>contacts</icon>
+    <name>Contacts</name>
+</record>
+</list>

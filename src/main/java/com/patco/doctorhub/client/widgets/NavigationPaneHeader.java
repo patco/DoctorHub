@@ -15,8 +15,8 @@ public class NavigationPaneHeader extends HLayout {
 	private Label navigationPaneHeaderLabel;
 	private Label contextAreaHeaderLabel;
 
-	
-	public NavigationPaneHeader() {
+	@Inject
+	public NavigationPaneHeader(DoctorHubConstants constants) {
 		super();
 		GWT.log("NavigationPaneHeader()");
 		// initialise the Navigation Pane Header layout container
@@ -28,14 +28,14 @@ public class NavigationPaneHeader extends HLayout {
 		navigationPaneHeaderLabel
 				.setStyleName("crm-NavigationPane-Header-Label");
 		navigationPaneHeaderLabel.setWidth(WEST_WIDTH);
-		navigationPaneHeaderLabel.setContents("Workplace");//TODO fix constants
+		navigationPaneHeaderLabel.setContents(constants.Workplace());
 		navigationPaneHeaderLabel.setAlign(Alignment.LEFT);
 		navigationPaneHeaderLabel.setOverflow(Overflow.HIDDEN);
 
 		// initialise the Context Area Header Label
 		contextAreaHeaderLabel = new Label();
 		contextAreaHeaderLabel.setStyleName("crm-ContextArea-Header-Label");
-		contextAreaHeaderLabel.setContents("Activities"); //TODO fix constants
+		contextAreaHeaderLabel.setContents(constants.Activities());
 		contextAreaHeaderLabel.setAlign(Alignment.LEFT);
 		contextAreaHeaderLabel.setOverflow(Overflow.HIDDEN);
 

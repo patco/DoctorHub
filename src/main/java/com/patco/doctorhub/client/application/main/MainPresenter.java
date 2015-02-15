@@ -47,7 +47,7 @@ public class MainPresenter extends
 	@Inject
 	MainPresenter(EventBus eventBus, MyView view, MyProxy proxy,
 			PlaceManager placeManager, DoctorHubConstants constants) {
-		super(eventBus, view, proxy, RevealType.RootLayout);
+		super(eventBus, view, proxy);
 
 		getView().setUiHandlers(this);
 
@@ -68,8 +68,8 @@ public class MainPresenter extends
 				constants.SalesStackSectionName());
 
 		// reveal the first nested Presenter
-		// PlaceRequest placRequest = new PlaceRequest(NameTokens.activities);
-		// placeManager.revealPlace(placRequest);
+        PlaceRequest placRequest = new PlaceRequest.Builder().nameToken(NameTokens.Activities).build();
+        placeManager.revealPlace(placRequest);
 	}
 
 	@Override

@@ -1,8 +1,9 @@
 package com.patco.doctorhub.client.place;
 
 public class NameTokens {
-	public static final String mainpage = "/mainpage";
+	public static final String Activities = "Activities";
 
+	public static final String mainpage = "/mainpage";
 
 	public static final String signin = "/signin";
 
@@ -12,6 +13,10 @@ public class NameTokens {
 
 	public static String getMainpage() {
 		return mainpage;
+	}
+
+	public static String getActivities() {
+		return Activities;
 	}
 
 }

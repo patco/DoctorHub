@@ -1,0 +1,26 @@
+<list>
+<record>
+    <icon>activities</icon>
+    <name>Tatigkeiten</name>
+</record>
+<record>
+    <icon>calendar</icon>
+    <name>Kalender</name>
+</record>
+<record>
+    <icon>leads</icon>
+    <name>Bleiarten</name>
+</record>
+<record>
+    <icon>opportunities</icon>
+    <name>Gelegenheiten</name>
+</record>
+<record>
+    <icon>accounts</icon>
+    <name>Konten</name>
+</record>
+<record>
+    <icon>contacts</icon>
+    <name>Kontakte</name>
+</record>
+</list>

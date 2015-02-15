@@ -49,7 +49,7 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
 	private final DoctorHubConstants constants;
 
     @Inject
-    MainView(Binder uiBinder, Masthead masthead,
+    MainView(Masthead masthead,
 			ApplicationMenu applicationMenu,
 			NavigationPaneHeader navigationPaneHeader,
 			NavigationPane navigationPane, DoctorHubConstants constants) {
@@ -87,10 +87,10 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
         
         initNavigationPane();
         
-        // initialise the West layout container
+        // Initialize the West layout container
         westLayout = this.navigationPane;
        
-        // initialise the South layout container
+        // Initialize the South layout container
         southLayout = new HLayout(); 
         
         // add the North and South layout containers to the main layout container
@@ -98,7 +98,6 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
         panel.addMember(southLayout);  
         
         bindCustomUiHandlers();
-        initWidget(uiBinder.createAndBindUi(this));
     }
     
  // as per NavigationPaneDataSource
@@ -171,11 +170,11 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
 
  	@Override
  	public void setInSlot(Object slot, IsWidget content) {
- 		GWT.log("setInSlot()");
+ 		GWT.log("Main View setInSlot()");
 
  		if (slot == MainPresenter.SLOT_Main) {
  			if (content != null) {
- 				southLayout.setMembers(westLayout, (VLayout) content);
+ 				southLayout.setMembers(westLayout, (VLayout) content.asWidget());
  			}
  		} else {
  			super.setInSlot(slot, content);

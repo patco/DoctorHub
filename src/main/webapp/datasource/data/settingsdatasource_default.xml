@@ -1,0 +1,14 @@
+<list>
+<record>
+    <icon>administration</icon>
+    <name>Administration</name>
+</record>
+<record>
+    <icon>templates</icon>
+    <name>Templates</name>
+</record>
+<record>
+    <icon>datamanagement</icon>
+    <name>Data Management</name>
+</record>
+</list>

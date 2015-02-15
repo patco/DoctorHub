@@ -1,0 +1,26 @@
+<list>
+<record>
+    <icon>information</icon>
+    <name>Information</name>
+</record>
+<record>
+    <icon>moreaddresses</icon>
+    <name>More Addresses</name>
+</record>
+<record>
+    <icon>activities</icon>
+    <name>Activities</name>
+</record>
+<record>
+    <icon>history</icon>
+    <name>History</name>
+</record>
+<record>
+    <icon>contacts</icon>
+    <name>Contacts</name>
+</record>
+<record>
+    <icon>relationships</icon>
+    <name>Relationships</name>
+</record>
+</list>
