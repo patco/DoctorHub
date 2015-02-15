@@ -146,8 +146,8 @@
 			<artifactId>smartgwt-lgpl</artifactId>
 			<version>${smartgwt.version}</version>
 		</dependency>
-		
-	    <dependency>
+
+		<dependency>
 			<groupId>com.isomorphic.smartgwt.lgpl</groupId>
 			<artifactId>smartgwt-skins</artifactId>
 			<version>${smartgwt.version}</version>
@@ -180,6 +180,12 @@
 			<groupId>com.wallissoftware</groupId>
 			<artifactId>gwt-pushstate</artifactId>
 			<version>${gwt-pushstate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.allen-sauer.gwt.log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>3.3.2</version>
 		</dependency>
 
 

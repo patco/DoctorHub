@@ -1,6 +1,6 @@
 package com.patco.doctorhub.client.widgets;
 
-import com.google.gwt.core.shared.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.smartgwt.client.data.DataSource;
 import com.smartgwt.client.types.VisibilityMode;
 import com.smartgwt.client.widgets.grid.events.RecordClickHandler;
@@ -18,7 +18,7 @@ public class NavigationPane extends VLayout {
 	public NavigationPane() {
 		super();
 		// Initialize the Navigation Pane layout container
-		GWT.log("NavigationPane");
+		Log.debug("NavigationPane");
 		this.setStyleName("crm-NavigationPane");
 		this.setWidth(WEST_WIDTH);
 		// this.setShowResizeBar(true);
@@ -51,7 +51,7 @@ public class NavigationPane extends VLayout {
 
 	public void selectRecord(String place) {
 
-		GWT.log("selectRecord(place) - " + place);
+		Log.debug("selectRecord(place) - " + place);
 
 		SectionStackSection[] sections = sectionStack.getSections();
 
@@ -61,7 +61,7 @@ public class NavigationPane extends VLayout {
 			if (((NavigationPaneSection) sectionStackSection).getRecord(place) != -1) {
 
 				if (!sectionStack.sectionIsExpanded(i)) {
-					GWT.log("sectionStack.expandSection(i)");
+					Log.debug("sectionStack.expandSection(i)");
 					sectionStack.expandSection(i);
 				}
 
@@ -80,7 +80,7 @@ public class NavigationPane extends VLayout {
 	public void addRecordClickHandler(String sectionName,
 			RecordClickHandler clickHandler) {
 
-		GWT.log("addRecordClickHandler(sectionName, clickHandler) - "
+		Log.debug("addRecordClickHandler(sectionName, clickHandler) - "
 				+ sectionName);
 
 		SectionStackSection[] sections = sectionStack.getSections();

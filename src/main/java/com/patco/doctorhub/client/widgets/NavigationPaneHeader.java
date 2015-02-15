@@ -1,6 +1,6 @@
 package com.patco.doctorhub.client.widgets;
 
-import com.google.gwt.core.shared.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.google.inject.Inject;
 import com.patco.doctorhub.client.resources.DoctorHubConstants;
 import com.smartgwt.client.types.Alignment;
@@ -18,7 +18,7 @@ public class NavigationPaneHeader extends HLayout {
 	@Inject
 	public NavigationPaneHeader(DoctorHubConstants constants) {
 		super();
-		GWT.log("NavigationPaneHeader()");
+		Log.debug("NavigationPaneHeader()");
 		// initialise the Navigation Pane Header layout container
 		this.setStyleName("crm-NavigationPane-Header");
 		this.setHeight(NAVIGATION_PANE_HEADER_HEIGHT);

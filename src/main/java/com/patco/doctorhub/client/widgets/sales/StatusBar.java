@@ -1,4 +1,4 @@
-package com.patco.doctorhub.client.widgets;
+package com.patco.doctorhub.client.widgets.sales;
 
 import com.google.inject.Inject;
 import com.patco.doctorhub.client.resources.DoctorHubConstants;

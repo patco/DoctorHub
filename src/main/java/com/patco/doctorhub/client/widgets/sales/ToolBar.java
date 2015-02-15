@@ -1,6 +1,6 @@
-package com.patco.doctorhub.client.widgets;
+package com.patco.doctorhub.client.widgets.sales;
 
-import com.google.gwt.core.client.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.google.inject.Inject;
 import com.patco.doctorhub.client.resources.DoctorHubConstants;
 import com.smartgwt.client.util.SC;
@@ -27,7 +27,7 @@ public class ToolBar extends HLayout {
 	@Inject
 	public ToolBar(DoctorHubConstants constants) {
 		super();
-		GWT.log("ToolBar()");
+		Log.debug("ToolBar()");
 
 		// Initialize the ToolStrip
 		ToolStrip toolStrip = new ToolStrip();

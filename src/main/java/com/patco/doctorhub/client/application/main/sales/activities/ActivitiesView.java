@@ -2,14 +2,14 @@ package com.patco.doctorhub.client.application.main.sales.activities;
 
 import javax.inject.Inject;
 
-import com.google.gwt.core.client.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.patco.doctorhub.client.model.ActivityData;
-import com.patco.doctorhub.client.widgets.ActivitiesContextAreaListGrid;
-import com.patco.doctorhub.client.widgets.StatusBar;
-import com.patco.doctorhub.client.widgets.ToolBar;
+import com.patco.doctorhub.client.widgets.sales.ActivitiesContextAreaListGrid;
+import com.patco.doctorhub.client.widgets.sales.StatusBar;
+import com.patco.doctorhub.client.widgets.sales.ToolBar;
 import com.smartgwt.client.widgets.layout.VLayout;
 
 class ActivitiesView extends ViewImpl implements ActivitiesPresenter.MyView {
@@ -28,7 +28,7 @@ class ActivitiesView extends ViewImpl implements ActivitiesPresenter.MyView {
 	ActivitiesView(ToolBar toolbar,
 			ActivitiesContextAreaListGrid listGrid, StatusBar statusBar) {
 		super();
-		GWT.log("ActivitiesView()");
+		Log.debug("ActivitiesView()");
 
 		this.toolbar = toolbar;
 		this.listGrid = listGrid;

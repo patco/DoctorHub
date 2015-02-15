@@ -1,6 +1,6 @@
 package com.patco.doctorhub.client.widgets;
 
-import com.google.gwt.core.shared.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.smartgwt.client.types.Alignment;
 import com.smartgwt.client.widgets.Img;
 import com.smartgwt.client.widgets.Label;
@@ -18,7 +18,7 @@ public class Masthead extends HLayout {
 
 	public Masthead() {
 		super();
-		GWT.log("Masthead()");
+        Log.debug("Masthead()");
 		// initialise the Masthead layout container
 		this.setStyleName("crm-Masthead");
 		this.setHeight(MASTHEAD_HEIGHT);

@@ -4,7 +4,7 @@ import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
 public class ActivitiesModule extends AbstractPresenterModule {
     @Override
-    protected void configure() {
-        bindPresenter(ActivitiesPresenter.class, ActivitiesPresenter.MyView.class, ActivitiesView.class, ActivitiesPresenter.MyProxy.class);
+    protected void configure() {        
+		bindPresenter(ActivitiesPresenter.class, ActivitiesPresenter.MyView.class, ActivitiesView.class, ActivitiesPresenter.MyProxy.class);
     }
 }

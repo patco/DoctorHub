@@ -1,6 +1,6 @@
 package com.patco.doctorhub.client.application.main;
 
-import com.google.gwt.core.client.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.google.gwt.event.shared.GwtEvent.Type;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
@@ -61,7 +61,7 @@ public class MainPresenter extends
 	protected void onBind() {
 		// TODO Auto-generated method stub
 		super.onBind();
-		GWT.log("onBind()");
+		Log.debug("onBind()");
 
 		// expand the first Navigation Pane section
 		getView().getNavigationPane().expandSection(
@@ -76,19 +76,18 @@ public class MainPresenter extends
 	protected void onReveal() {
 		super.onReveal();
 
-		GWT.log("onReveal()");
+		Log.debug("onReveal()");
 	}
 
 	@Override
 	protected void onReset() {
 		super.onReset();
 
-		GWT.log("onReset()");
+		Log.debug("onReset()");
 	}
 
 	@Override
 	protected void revealInParent() {
-		// RevealRootLayoutContentEvent.fire(this, this);
 		RevealRootContentEvent.fire(this, this);
 	}
 

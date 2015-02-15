@@ -1,6 +1,7 @@
-package com.patco.doctorhub.client.widgets;
+package com.patco.doctorhub.client.widgets.sales;
 
 import com.patco.doctorhub.client.model.ActivityData;
+import com.patco.doctorhub.client.widgets.SalesContextAreaListGrid;
 import com.smartgwt.client.types.Alignment;
 import com.smartgwt.client.types.ListGridFieldType;
 import com.smartgwt.client.widgets.grid.ListGridField;

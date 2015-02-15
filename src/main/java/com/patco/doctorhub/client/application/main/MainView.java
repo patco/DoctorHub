@@ -2,7 +2,7 @@ package com.patco.doctorhub.client.application.main;
 
 import javax.inject.Inject;
 
-import com.google.gwt.core.shared.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.IsWidget;
@@ -65,18 +65,18 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
         Window.enableScrolling(false);
         Window.setMargin(DEFAULT_MARGIN);    
         
-        // initialise the main layout container
+        // Initialize the main layout container
         panel = new VLayout();
         panel.setWidth100();  
         panel.setHeight100();  
         
-        // initialise the North layout container
+        // Initialize the North layout container
         northLayout = new HLayout();  
         northLayout.setHeight(NORTH_HEIGHT); 
      
         initApplicationMenu();
         
-        // initialise the nested layout container
+        // Initialize the nested layout container
         VLayout vLayout = new VLayout(); 
         vLayout.addMember(this.masthead);
         vLayout.addMember(this.applicationMenu);
@@ -117,7 +117,7 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
  						String name = ((NavigationPaneSection) section)
  								.getSelectedRecord();
 
- 						GWT.log("onSectionHeaderClick() - " + name);
+ 						Log.debug("onSectionHeaderClick() - " + name);
 
  						if (getUiHandlers() != null) {
  							getUiHandlers()
@@ -156,7 +156,7 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
  		Record record = event.getRecord();
  		String name = record.getAttributeAsString(NAME);
 
- 		GWT.log("onRecordClicked() - " + name);
+ 		Log.debug("onRecordClicked() - " + name);
 
  		if (getUiHandlers() != null) {
  			getUiHandlers().onNavigationPaneSectionClicked(name);
@@ -170,7 +170,7 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
 
  	@Override
  	public void setInSlot(Object slot, IsWidget content) {
- 		GWT.log("Main View setInSlot()");
+ 		Log.debug("Main View setInSlot()");
 
  		if (slot == MainPresenter.SLOT_Main) {
  			if (content != null) {
@@ -185,7 +185,7 @@ class MainView extends ViewWithUiHandlers<MainUiHandlers> implements MainPresent
  	public void removeFromSlot(Object slot, IsWidget content) {
  		// TODO Auto-generated method stub
  		super.removeFromSlot(slot, content);
- 		GWT.log("removeFromSlot()");
+ 		Log.debug("removeFromSlot()");
  	}
 
  	private void initApplicationMenu() {

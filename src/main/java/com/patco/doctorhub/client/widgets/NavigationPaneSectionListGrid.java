@@ -1,6 +1,6 @@
 package com.patco.doctorhub.client.widgets;
 
-import com.google.gwt.core.client.GWT;
+import com.allen_sauer.gwt.log.client.Log;
 import com.smartgwt.client.data.DataSource;
 import com.smartgwt.client.types.Alignment;
 import com.smartgwt.client.types.ListGridFieldType;
@@ -21,8 +21,8 @@ public class NavigationPaneSectionListGrid extends ListGrid {
 
 	public NavigationPaneSectionListGrid(DataSource dataSource) {
 		super();
-		GWT.log("NavigationPaneSectionListGrid");
-		// initialise the List Grid
+		Log.debug("NavigationPaneSectionListGrid");
+		// Initialize the List Grid
 		this.setBaseStyle("crm-NavigationPaneGridCell");
 		this.setDataSource(dataSource);
 		this.setWidth100();
@@ -30,7 +30,7 @@ public class NavigationPaneSectionListGrid extends ListGrid {
 		this.setShowAllRecords(true);
 		this.setShowHeader(false);
 
-		// initialise the Icon field
+		// Initialize the Icon field
 		ListGridField appIconField = new ListGridField(ICON, ICON_DISPLAY_NAME,
 				ICON_FIELD_WIDTH);
 		appIconField.setImageSize(16);
@@ -40,7 +40,7 @@ public class NavigationPaneSectionListGrid extends ListGrid {
 		appIconField.setImageURLSuffix(URL_SUFFIX);
 		appIconField.setCanEdit(false);
 
-		// initialise the Name field
+		// Initialize the Name field
 		ListGridField appNameField = new ListGridField(NAME, NAME_DISPLAY_NAME);
 
 		// set the fields into the List Grid
@@ -50,14 +50,14 @@ public class NavigationPaneSectionListGrid extends ListGrid {
 		this.addDataArrivedHandler(new DataArrivedHandler() {
 			@Override
 			public void onDataArrived(DataArrivedEvent event) {
-				GWT.log("onDataArrived()");
+				Log.debug("onDataArrived()");
 
 				selectRecord(0);
 			}
 		});
 
 		// populate the List Grid
-		GWT.log("setAutoFetchData(true)");
+		Log.debug("setAutoFetchData(true)");
 		this.setAutoFetchData(true);
 	}
 
