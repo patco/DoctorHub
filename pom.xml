@@ -12,10 +12,10 @@
 	<properties>
 		<!-- client -->
 		<gwt.version>2.7.0</gwt.version>
-		<gwtp.version>1.3.1</gwtp.version>
+		<gwtp.version>1.4</gwtp.version>
 		<gin.version>2.1.2</gin.version>
 		<gwt-pushstate.version>1.1.4</gwt-pushstate.version>
-		<smartgwt.version>5.0-p20150131</smartgwt.version>
+		<smartgwt.version>5.0-p20150216</smartgwt.version>
 		<!-- server -->
 		<guice.version>3.0</guice.version>
 
