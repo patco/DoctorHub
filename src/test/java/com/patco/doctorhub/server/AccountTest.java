@@ -19,7 +19,7 @@ import com.patco.doctorhub.server.domain.sales.Account;
 import com.patco.doctorhub.server.domain.sales.Address;
 
 @RunWith(JukitoRunner.class)
-@UseModules(DatabaseModule.class)
+@UseModules(DatabaseModule.class) 
 public class AccountTest {
 
 	private long startTimeMillis;

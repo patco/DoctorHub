@@ -1,5 +1,6 @@
 package com.patco.doctorhub.client.gin;
 
+import com.gwtplatform.dispatch.rpc.client.gin.RpcDispatchAsyncModule;
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.annotations.ErrorPlace;
 import com.gwtplatform.mvp.client.annotations.UnauthorizedPlace;
@@ -17,6 +18,7 @@ public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
         install(new DefaultModule.Builder().tokenFormatter(ParameterTokenFormatter.class).build());
+        install(new RpcDispatchAsyncModule());
         install(new ApplicationModule());
 
         // DefaultPlaceManager Places

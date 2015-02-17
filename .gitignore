@@ -46,3 +46,4 @@ target/
 gwt-unitCache/
 .project
 .classpath
+db/
