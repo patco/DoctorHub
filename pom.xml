@@ -37,6 +37,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<hibernate.version>4.3.8.Final</hibernate.version>
 	</properties>
 
 	<build>
@@ -176,6 +177,14 @@
 			<version>${gin.version}</version>
 		</dependency>
 
+		<!-- Guice persist -->
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-persist</artifactId>
+			<version>${guice.version}</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>com.wallissoftware</groupId>
 			<artifactId>gwt-pushstate</artifactId>
@@ -192,16 +201,21 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.8.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 		<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.3.8.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
 
 		<!-- HSQL -->
 		<dependency>

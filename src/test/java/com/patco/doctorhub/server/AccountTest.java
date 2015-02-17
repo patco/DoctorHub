@@ -4,24 +4,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.jukito.JukitoRunner;
+import org.jukito.UseModules;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import com.allen_sauer.gwt.log.client.Log;
+import com.google.inject.Inject;
+import com.patco.doctorhub.server.db.DatabaseModule;
 import com.patco.doctorhub.server.domain.dao.sales.AccountDao;
 import com.patco.doctorhub.server.domain.sales.Account;
 import com.patco.doctorhub.server.domain.sales.Address;
 
+@RunWith(JukitoRunner.class)
+@UseModules(DatabaseModule.class)
 public class AccountTest {
 
 	private long startTimeMillis;
+	
+	@Inject
+	AccountDao accountDao;
 
 	@Before
 	public void setUp() {
 
 		// The log4j configuration file must be in the Project's root directory
-		DOMConfigurator.configure("log4j.xml");
+		DOMConfigurator.configure("src/test/resources/META-INF/log4j.xml");
 
 		// When developing applications with Hibernate, you should almost always
 		// work
@@ -183,7 +193,7 @@ public class AccountTest {
 		company5.setPrimaryContact("Sean Doyle");
 		company5.setEmailPrimaryContact("sales@uptick.com.au");
 
-		AccountDao accountDao = new AccountDao();
+
 		accountDao.createAccount(company1);
 		accountDao.createAccount(company2);
 		accountDao.createAccount(company3);
