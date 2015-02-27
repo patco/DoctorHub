@@ -82,7 +82,6 @@ class AccountsView extends ViewWithUiHandlers<AccountsUiHandlers> implements
 	}
 
 	public void setServerResponse(List<AccountsDto> accountDtos) {
-		// accountDtos == null when there are no items in table
 		if (accountDtos != null) {
 			listGrid.setServerResponse(accountDtos);
 		}

@@ -18,6 +18,11 @@
 		<smartgwt.version>5.0-p20150216</smartgwt.version>
 		<!-- server -->
 		<guice.version>3.0</guice.version>
+		<resteasy.version>3.0.9.Final</resteasy.version>
+		<jax-rs.version>1.1.1</jax-rs.version>
+		
+		<!-- Arcbees utils -->
+		<arcbees.version>1.2</arcbees.version>
 
 		<!-- testing -->
 		<junit.version>4.11</junit.version>
@@ -143,6 +148,26 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.gwtplatform</groupId>
+			<artifactId>gwtp-dispatch-rest</artifactId>
+			<version>${gwtp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.gwtplatform.extensions</groupId>
+			<artifactId>dispatch-rest-delegates</artifactId>
+			<version>${gwtp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.gwtplatform</groupId>
+			<artifactId>gwtp-dispatch-rest-shared</artifactId>
+			<version>${gwtp.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- SmartGWT -->
+		<dependency>
 			<groupId>com.isomorphic.smartgwt.lgpl</groupId>
 			<artifactId>smartgwt-lgpl</artifactId>
 			<version>${smartgwt.version}</version>
@@ -153,7 +178,6 @@
 			<artifactId>smartgwt-skins</artifactId>
 			<version>${smartgwt.version}</version>
 		</dependency>
-
 
 		<!-- DI -->
 		<dependency>
@@ -223,6 +247,36 @@
 			<artifactId>hsqldb</artifactId>
 			<version>2.3.2</version>
 		</dependency>
+		
+		 <!-- REST -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <version>${resteasy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jackson-provider</artifactId>
+            <version>${resteasy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-guice</artifactId>
+            <version>${resteasy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>jsr311-api</artifactId>
+            <version>${jax-rs.version}</version>
+            <!-- Provided because RestEasy has its own implementation -->
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.arcbees</groupId>
+            <artifactId>guicy-resteasy</artifactId>
+            <version>${arcbees.version}</version>
+        </dependency>
 
 		<!-- Logging Server side -->
 		<dependency>
